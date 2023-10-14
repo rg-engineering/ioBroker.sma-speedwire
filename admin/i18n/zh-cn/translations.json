@@ -1,0 +1,7 @@
+{
+    "ip address of sma device": "sma 设备的 IP 地址",
+    "on save adapter restarts with new config immediately": "保存适配器后立即使用新配置重新启动",
+    "password for login": "登录密码",
+    "the port where the device is listening": "设备正在侦听的端口",
+    "user name for login": "登录用户名"
+}

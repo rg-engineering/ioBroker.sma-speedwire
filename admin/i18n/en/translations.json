@@ -1,0 +1,7 @@
+{
+    "ip address of sma device": "ip address of sma device",
+    "on save adapter restarts with new config immediately": "on save adapter restarts with new config immediately",
+    "password for login": "password for login",
+    "the port where the device is listening": "the port where the device is listening",
+    "user name for login": "user name for login"
+}

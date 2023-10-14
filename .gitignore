@@ -2,3 +2,6 @@
 /node_modules
 /nbproject
 .DS_Store
+*.orig
+/sma-speedwire.njsproj.user
+/sma-speedwire.njsproj

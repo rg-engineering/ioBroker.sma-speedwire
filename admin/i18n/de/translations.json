@@ -1,0 +1,7 @@
+{
+    "ip address of sma device": "IP Adresse des Inverters",
+    "on save adapter restarts with new config immediately": "Beim Speichern von Einstellungen wird der Adapter sofort neu gestartet.",
+    "password for login": "Password für den Benutzer",
+    "the port where the device is listening": "Der Port für die Verbindung",
+    "user name for login": "Name des Benutzers"
+}

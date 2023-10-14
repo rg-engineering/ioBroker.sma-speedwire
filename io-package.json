@@ -1,64 +1,97 @@
 {
-    "common": {
-        "name": "sma-speedwire",
-        "version": "0.6.10",
-        "news": {
-            "0.5.0": {
-
-            },
-            "0.0.1": {
-                "en": "initial adapter",
-                "de": "Initiale Version"
-            }
-        },
-        "title": "Javascript/Node.js based sma-speedwire adapter",
-        "desc": {
-            "Adapter to query values from sma devices": {
-              "en": "Adapter to query values from sma devices",
-              "de": "Adapter zum Abfragen von Werten von SMA-Geräten",
-              "ru": "Адаптер для запроса значений из sma-устройств",
-              "pt": "Adaptador para consultar valores de dispositivos sma",
-              "nl": "Adapter om waarden op te vragen van sma-apparaten",
-              "fr": "Adaptateur pour interroger les valeurs des périphériques sma",
-              "it": "Adattatore per interrogare i valori dai dispositivi sma",
-              "es": "Adaptador para consultar valores de dispositivos sma",
-              "pl": "Adapter do wyszukiwania wartości z urządzeń sma"
-            }
-          },
-        "authors": [
-            "my Name <thomasAthepper.eu>"
-        ],
-        "platform": "Javascript/Node.js",
-        "mode": "schedule",
-        "schedule": "*/5 * * * *",
-        "icon": "sma-speedwire.png",
-        "materialize": true,
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sma-speedwire/master/admin/sma-speedwire.png",
-        "keywords": ["sma-speedwire"],
-        "readme": "https://github.com/ioBroker/ioBroker.sma-speedwire/blob/master/README.md",
-        "loglevel": "info",
-        "type": "general"
+  "common": {
+    "name": "sma-speedwire",
+    "version": "0.7.0",
+    "news": {
+      "0.7.0": {
+        "en": "make ist ready for latest ioBroker version",
+        "de": "make ist bereit für die neueste ioBroker-Version",
+        "ru": "подготовьтесь к последней версии ioBroker",
+        "pt": "prepare-se para a versão mais recente do ioBroker",
+        "nl": "maak het klaar voor de nieuwste ioBroker-versie",
+        "fr": "préparer est prêt pour la dernière version d'ioBroker",
+        "it": "rendilo pronto per l'ultima versione di ioBroker",
+        "es": "prepárelo para la última versión de ioBroker",
+        "pl": "przygotuj go na najnowszą wersję ioBroker",
+        "uk": "підготуйте його до останньої версії ioBroker",
+        "zh-cn": "为最新的 ioBroker 版本做好准备"
+      },
+      "0.0.1": {
+        "en": "initial adapter",
+        "de": "Initiale Version",
+        "ru": "первоначальный адаптер",
+        "pt": "adaptador inicial",
+        "nl": "initiële adapter",
+        "fr": "adaptateur initial",
+        "it": "adattatore iniziale",
+        "es": "adaptador inicial",
+        "pl": "adapter początkowy",
+        "uk": "початковий адаптер",
+        "zh-cn": "初始适配器"
+      }
     },
+    "titleLang": {
+      "en": "sma-speedwire",
+      "de": "sma-speedwire",
+      "ru": "sma-speedwire",
+      "pt": "sma-speedwire",
+      "nl": "sma-speedwire",
+      "fr": "sma-speedwire",
+      "it": "sma-speedwire",
+      "es": "sma-speedwire",
+      "pl": "sma-speedwire",
+      "uk": "sma-speedwire",
+      "zh-cn": "SMA-高速线"
+    },
+    "desc": {
+      "en": "Adapter to query values from sma devices",
+      "de": "Adapter zum Abfragen von Werten von SMA-Geräten",
+      "ru": "Адаптер для запроса значений из sma-устройств",
+      "pt": "Adaptador para consultar valores de dispositivos sma",
+      "nl": "Adapter om waarden op te vragen van sma-apparaten",
+      "fr": "Adaptateur pour interroger les valeurs des périphériques sma",
+      "it": "Adattatore per interrogare i valori dai dispositivi sma",
+      "es": "Adaptador para consultar valores de dispositivos sma",
+      "pl": "Adapter do wyszukiwania wartości z urządzeń sma",
+      "uk": "Адаптер для запиту значень із пристроїв sma",
+      "zh-cn": "用于从 sma 设备查询值的适配器"
+    },
+    "authors": [
+      "my Name <thomasAthepper.eu>"
+    ],
+    "platform": "Javascript/Node.js",
+    "mode": "schedule",
+    "schedule": "*/5 * * * *",
+    "icon": "sma-speedwire.png",
+    "materialize": true,
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sma-speedwire/master/admin/sma-speedwire.png",
+    "keywords": [
+      "sma-speedwire"
+    ],
+    "license": "MIT",
+    "readme": "https://github.com/rg-engineering/ioBroker.sma-speedwire/blob/master/README.md",
+    "loglevel": "info",
+    "type": "general"
+  },
     "native": {
         "ip": "0.0.0.0",
         "port": 9522,
         "user": "Benutzer",
-        "password" : "0000"
+        "password": "0000"
     },
-    "objects": [
-    ],
+    "objects": [],
     "instanceObjects": [
         {
             "_id": "INV_CLASS",
             "type": "state",
             "common": {
-                "name":  "INV_CLASS",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "INV_CLASS",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "INV_CLASS"
+                "desc": "INV_CLASS"
             },
             "native": {}
         },
@@ -66,12 +99,12 @@
             "_id": "INV_TYPE",
             "type": "state",
             "common": {
-                "name":  "INV_TYPE",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "INV_TYPE",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "INV_TYPE"
+                "desc": "INV_TYPE"
             },
             "native": {}
         },
@@ -79,12 +112,12 @@
             "_id": "SPOT_PDC",
             "type": "state",
             "common": {
-                "name":  "SPOT_PDC",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_PDC",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_PDC"
+                "desc": "SPOT_PDC"
             },
             "native": {}
         },
@@ -92,12 +125,12 @@
             "_id": "SPOT_PACTOT",
             "type": "state",
             "common": {
-                "name":  "SPOT_PACTOT",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_PACTOT",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_PACTOT"
+                "desc": "SPOT_PACTOT"
             },
             "native": {}
         },
@@ -105,12 +138,12 @@
             "_id": "SPOT_PAC1",
             "type": "state",
             "common": {
-                "name":  "SPOT_PAC1",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_PAC1",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_PAC1"
+                "desc": "SPOT_PAC1"
             },
             "native": {}
         },
@@ -118,12 +151,12 @@
             "_id": "SPOT_PAC2",
             "type": "state",
             "common": {
-                "name":  "SPOT_PAC2",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_PAC2",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_PAC2"
+                "desc": "SPOT_PAC2"
             },
             "native": {}
         },
@@ -131,12 +164,12 @@
             "_id": "SPOT_PAC3",
             "type": "state",
             "common": {
-                "name":  "SPOT_PAC3",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_PAC3",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_PAC3"
+                "desc": "SPOT_PAC3"
             },
             "native": {}
         },
@@ -144,12 +177,12 @@
             "_id": "SPOT_IAC1_2",
             "type": "state",
             "common": {
-                "name":  "SPOT_IAC1_2",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_IAC1_2",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_IAC1_2"
+                "desc": "SPOT_IAC1_2"
             },
             "native": {}
         },
@@ -157,12 +190,12 @@
             "_id": "SPOT_IAC2_2",
             "type": "state",
             "common": {
-                "name":  "SPOT_IAC2_2",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_IAC2_2",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_IAC2_2"
+                "desc": "SPOT_IAC2_2"
             },
             "native": {}
         },
@@ -170,12 +203,12 @@
             "_id": "SPOT_IAC3_2",
             "type": "state",
             "common": {
-                "name":  "SPOT_IAC3_2",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_IAC3_2",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_IAC3_2"
+                "desc": "SPOT_IAC3_2"
             },
             "native": {}
         },
@@ -183,12 +216,12 @@
             "_id": "SPOT_IAC1",
             "type": "state",
             "common": {
-                "name":  "SPOT_IAC1",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_IAC1",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_IAC1"
+                "desc": "SPOT_IAC1"
             },
             "native": {}
         },
@@ -196,12 +229,12 @@
             "_id": "SPOT_IAC2",
             "type": "state",
             "common": {
-                "name":  "SPOT_IAC2",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_IAC2",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_IAC2"
+                "desc": "SPOT_IAC2"
             },
             "native": {}
         },
@@ -209,12 +242,12 @@
             "_id": "SPOT_IAC3",
             "type": "state",
             "common": {
-                "name":  "SPOT_IAC3",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_IAC3",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_IAC3"
+                "desc": "SPOT_IAC3"
             },
             "native": {}
         },
@@ -222,12 +255,12 @@
             "_id": "SPOT_UAC1",
             "type": "state",
             "common": {
-                "name":  "SPOT_UAC1",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_UAC1",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_UAC1"
+                "desc": "SPOT_UAC1"
             },
             "native": {}
         },
@@ -235,12 +268,12 @@
             "_id": "SPOT_UAC2",
             "type": "state",
             "common": {
-                "name":  "SPOT_UAC2",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_UAC2",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_UAC2"
+                "desc": "SPOT_UAC2"
             },
             "native": {}
         },
@@ -248,12 +281,12 @@
             "_id": "SPOT_UAC3",
             "type": "state",
             "common": {
-                "name":  "SPOT_UAC3",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_UAC3",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_UAC3"
+                "desc": "SPOT_UAC3"
             },
             "native": {}
         },
@@ -261,12 +294,12 @@
             "_id": "SPOT_IDC1",
             "type": "state",
             "common": {
-                "name":  "SPOT_IDC1",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_IDC1",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_IDC1"
+                "desc": "SPOT_IDC1"
             },
             "native": {}
         },
@@ -274,12 +307,12 @@
             "_id": "SPOT_IDC2",
             "type": "state",
             "common": {
-                "name":  "SPOT_IDC2",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_IDC2",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_IDC2"
+                "desc": "SPOT_IDC2"
             },
             "native": {}
         },
@@ -287,12 +320,12 @@
             "_id": "SPOT_IDC3",
             "type": "state",
             "common": {
-                "name":  "SPOT_IDC3",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_IDC3",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_IDC3"
+                "desc": "SPOT_IDC3"
             },
             "native": {}
         },
@@ -300,12 +333,12 @@
             "_id": "SPOT_UDC1",
             "type": "state",
             "common": {
-                "name":  "SPOT_UDC1",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_UDC1",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_UDC1"
+                "desc": "SPOT_UDC1"
             },
             "native": {}
         },
@@ -313,12 +346,12 @@
             "_id": "SPOT_UDC2",
             "type": "state",
             "common": {
-                "name":  "SPOT_UDC2",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_UDC2",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_UDC2"
+                "desc": "SPOT_UDC2"
             },
             "native": {}
         },
@@ -326,12 +359,12 @@
             "_id": "SPOT_UDC3",
             "type": "state",
             "common": {
-                "name":  "SPOT_UDC3",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_UDC3",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_UDC3"
+                "desc": "SPOT_UDC3"
             },
             "native": {}
         },
@@ -339,12 +372,12 @@
             "_id": "SPOT_PACMAX1",
             "type": "state",
             "common": {
-                "name":  "SPOT_PACMAX1",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_PACMAX1",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_PACMAX1"
+                "desc": "SPOT_PACMAX1"
             },
             "native": {}
         },
@@ -352,12 +385,12 @@
             "_id": "SPOT_PACMAX2",
             "type": "state",
             "common": {
-                "name":  "SPOT_PACMAX2",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_PACMAX2",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_PACMAX2"
+                "desc": "SPOT_PACMAX2"
             },
             "native": {}
         },
@@ -365,12 +398,12 @@
             "_id": "SPOT_PACMAX3",
             "type": "state",
             "common": {
-                "name":  "SPOT_PACMAX3",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_PACMAX3",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_PACMAX3"
+                "desc": "SPOT_PACMAX3"
             },
             "native": {}
         },
@@ -378,12 +411,12 @@
             "_id": "SPOT_ETOTAL",
             "type": "state",
             "common": {
-                "name":  "SPOT_ETOTAL",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_ETOTAL",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_ETOTAL"
+                "desc": "SPOT_ETOTAL"
             },
             "native": {}
         },
@@ -391,12 +424,12 @@
             "_id": "SPOT_ETODAY",
             "type": "state",
             "common": {
-                "name":  "SPOT_ETODAY",
-                "type":  "number",
-                "role":  "value",
-                "read":  true,
+                "name": "SPOT_ETODAY",
+                "type": "number",
+                "role": "value",
+                "read": true,
                 "write": false,
-                "desc":  "SPOT_ETODAY"
+                "desc": "SPOT_ETODAY"
             },
             "native": {}
         }
