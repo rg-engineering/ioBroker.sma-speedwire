@@ -1,10 +1,10 @@
 {
   "name": "iobroker.sma-speedwire",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "ioBroker sma-speedwire Adapter",
   "author": {
-    "name": "@@Author@@",
-    "email": "@@email@@"
+    "name": "Thomas Hepper",
+    "email": "thomas@hepper.eu"
   },
   "contributors": [
     {
@@ -12,7 +12,7 @@
       "email": "info@rg-engineering.eu"
     }
   ],
-  "homepage": "https://github.com/rg-engineering/ioBroker.sma-speedwire",
+  "homepage": "https://github.com/AttackStrawbery/iobroker.sma-speedwire",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -22,9 +22,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rg-engineering/ioBroker.sma-speedwire"
+    "url": "https://github.com/AttackStrawbery/iobroker.sma-speedwire"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@iobroker/adapter-core": "3.0.3"
+  },
   "devDependencies": {
     "@alcalzone/release-script": "^3.6.0",
     "@iobroker/adapter-dev": "1.2.0",

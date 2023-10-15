@@ -5,3 +5,5 @@
 *.orig
 /sma-speedwire.njsproj.user
 /sma-speedwire.njsproj
+/bin/Microsoft.NodejsTools.WebRole.dll
+/obj/*
