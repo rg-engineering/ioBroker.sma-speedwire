@@ -21,6 +21,9 @@ This is a adapter for iobroker that can communicate with SMA inverters using the
 
 ## Changelog
 
+### **WORK IN PROGRESS**
+* (René) support more then one SMA device per instance
+
 ### 0.8.0
 * (René) overworked to be useable with latest ioBroker versions
 

@@ -46,6 +46,23 @@
         });
         onChange(false);
         M.updateTextFields();  // function Materialize.updateTextFields(); to reinitialize all the Materialize labels on the page if you are dynamically adding inputs.
+
+
+        if (settings.devices == null) {
+            device = {
+                Active: true,
+                IP: settings.ip,
+                Port: settings.port,
+                User: settings.user,
+                Password: settings.password
+            };
+            settings.devices = [];
+            settings.devices.push(device);
+        }
+
+
+        values2table('Devices', settings.devices, onChange, tableDevicesOnReady);
+
     }
 
     // ... and the function save has to exist.
@@ -61,8 +78,18 @@
                 obj[$this.attr('id')] = $this.val();
             }
         });
+
+        obj.devices = table2values('Devices');
+
         callback(obj);
     }
+
+    function tableDevicesOnReady() {
+        console.log('tableDevicesOnReady');
+
+    }
+
+
 </script>
 </head>
 <body>
@@ -70,12 +97,14 @@
     <div class="m adapter-container">
         <div class="row">
             <!-- Forms are the standard way to receive user inputted data.
-         Learn more http://materializecss.com/forms.html-->
+    Learn more http://materializecss.com/forms.html-->
             <div class="row">
                 <div class="input-field col s6">
                     <img src="template.png" class="logo">
                 </div>
             </div>
+
+            <!--
             <div class="row">
                 <div class="input-field col s12 m6 l4">
                     <input class="value" id="ip" type="text">
@@ -85,24 +114,50 @@
                 <div class="input-field col s12 m6 l4">
                     <input type="number" class="value" id="port" />
                     <label for="port" class="translate">Port</label>
-                    <!-- Important: label must come directly after input. Label is important. -->
-                    <span class="translate">the port where the device is listening</span>
+
+            <span class="translate">the port where the device is listening</span>
+        </div>
+    </div>
+    <div class=row>
+        <div class="input-field col s12 m6 l4">
+            <input type="text" class="value" id="user" />
+            <label for="user" class="translate">User</label>
+
+            <span class="translate">user name for login</span>
+        </div>
+        <div class="input-field col s12 m6 l4">
+            <input type="text" class="value" id="password" />
+            <label for="password" class="translate">Password</label>
+
+            <span class="translate">password for login</span>
+        </div>
+    </div>
+    -->
+            <div class="row">
+                <div class="col s12" id="Devices">
+                    <a id="addNewDevice" class="btn-floating waves-effect waves-light blue table-button-add" title="add device"><i class="material-icons">add</i></a>
+
+                    <div class="table-devices-div">
+                        <table id="table-devices" class="table-values" style="width: 100%;">
+                            <thead>
+                                <tr>
+
+                                    <th id="tableDevices_col0" data-name="Active" data-type="checkbox" style="background: #64b5f6 " class="header translate">Active</th>
+                                    <th id="tableDevices_col1" data-name="IP" data-type="text" style="background: #64b5f6 " class="header translate">ip address of sma device</th>
+                                    <th id="tableDevices_col2" data-name="Port" data-type="number" style="background: #64b5f6 " class="header translate">Port</th>
+                                    <th id="tableDevices_col3" data-name="User" data-type="text" style="background: #64b5f6 " class="header translate">User</th>
+                                    <th id="tableDevices_col4" data-name="Password" data-type="text" style="background: #64b5f6 " class="header translate">Password</th>
+
+                                    <th data-buttons="up down delete" style="width: 100px; background: #64b5f6"></th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
+
             </div>
-            <div class=row>
-                <div class="input-field col s12 m6 l4">
-                    <input type="text" class="value" id="user" />
-                    <label for="user" class="translate">User</label>
-                    <!-- Important: label must come directly after input. Label is important. -->
-                    <span class="translate">user name for login</span>
-                </div>
-                <div class="input-field col s12 m6 l4">
-                    <input type="text" class="value" id="password" />
-                    <label for="password" class="translate">Password</label>
-                    <!-- Important: label must come directly after input. Label is important. -->
-                    <span class="translate">password for login</span>
-                </div>
-            </div>
+
+
             <div class="row">
                 <div class="col s12">
                     <p class="translate">on save adapter restarts with new config immediately</p>

@@ -1,48 +1,51 @@
 {
     "common": {
         "name": "sma-speedwire",
-        "version": "0.8.0",
-        "news": {
-            "0.8.0": {
-                "en": "make ist ready for latest ioBroker version",
-                "de": "make ist bereit für die neueste ioBroker-Version",
-                "ru": "подготовьтесь к последней версии ioBroker",
-                "pt": "prepare-se para a versão mais recente do ioBroker",
-                "nl": "maak het klaar voor de nieuwste ioBroker-versie",
-                "fr": "préparer est prêt pour la dernière version d'ioBroker",
-                "it": "rendilo pronto per l'ultima versione di ioBroker",
-                "es": "prepárelo para la última versión de ioBroker",
-                "pl": "przygotuj go na najnowszą wersję ioBroker",
-                "uk": "підготуйте його до останньої версії ioBroker",
-                "zh-cn": "为最新的 ioBroker 版本做好准备"
-            },
-            "0.7.0": {
-                "en": "Rework in a lot of areas, added role and unit settings for the values",
-                "de": "Überarbeitung in vielen Bereichen, bei den Werten werden nun auch die Werte für die Rolle und Unit gesetzt ",
-                "ru": "Переработано множество областей, добавлены настройки ролей и единиц измерения для значений.",
-                "pt": "Retrabalho em muitas áreas, adição de funções e configurações de unidade para os valores",
-                "nl": "Op veel gebieden herwerkt, rol- en eenheidsinstellingen voor de waarden toegevoegd",
-                "fr": "Retravail dans de nombreux domaines, ajout de paramètres de rôle et d'unité pour les valeurs",
-                "it": "Rielaborazione in molte aree, aggiunta di impostazioni di ruoli e unità per i valori",
-                "es": "Retrabajo en muchas áreas, configuración agregada de roles y unidades para los valores.",
-                "pl": "Przerobiono wiele obszarów, dodano ustawienia ról i jednostek dla wartości",
-                "uk": "Перероблено багато областей, додано налаштування ролей і підрозділів для значень",
-                "zh-cn": "在很多领域进行了返工，添加了角色和单位的值设置"
-            },
-            "0.0.1": {
-                "en": "initial adapter",
-                "de": "Initiale Version",
-                "ru": "первоначальный адаптер",
-                "pt": "adaptador inicial",
-                "nl": "initiële adapter",
-                "fr": "adaptateur initial",
-                "it": "adattatore iniziale",
-                "es": "adaptador inicial",
-                "pl": "adapter początkowy",
-                "uk": "початковий адаптер",
-                "zh-cn": "初始适配器"
-            }
+        "version": "0.9.0",
+      "news": {
+        "0.9.0": {
+          "en": "support more then one device"
         },
+        "0.8.0": {
+          "en": "make ist ready for latest ioBroker version",
+          "de": "make ist bereit für die neueste ioBroker-Version",
+          "ru": "подготовьтесь к последней версии ioBroker",
+          "pt": "prepare-se para a versão mais recente do ioBroker",
+          "nl": "maak het klaar voor de nieuwste ioBroker-versie",
+          "fr": "préparer est prêt pour la dernière version d'ioBroker",
+          "it": "rendilo pronto per l'ultima versione di ioBroker",
+          "es": "prepárelo para la última versión de ioBroker",
+          "pl": "przygotuj go na najnowszą wersję ioBroker",
+          "uk": "підготуйте його до останньої версії ioBroker",
+          "zh-cn": "为最新的 ioBroker 版本做好准备"
+        },
+        "0.7.0": {
+          "en": "Rework in a lot of areas, added role and unit settings for the values",
+          "de": "Überarbeitung in vielen Bereichen, bei den Werten werden nun auch die Werte für die Rolle und Unit gesetzt ",
+          "ru": "Переработано множество областей, добавлены настройки ролей и единиц измерения для значений.",
+          "pt": "Retrabalho em muitas áreas, adição de funções e configurações de unidade para os valores",
+          "nl": "Op veel gebieden herwerkt, rol- en eenheidsinstellingen voor de waarden toegevoegd",
+          "fr": "Retravail dans de nombreux domaines, ajout de paramètres de rôle et d'unité pour les valeurs",
+          "it": "Rielaborazione in molte aree, aggiunta di impostazioni di ruoli e unità per i valori",
+          "es": "Retrabajo en muchas áreas, configuración agregada de roles y unidades para los valores.",
+          "pl": "Przerobiono wiele obszarów, dodano ustawienia ról i jednostek dla wartości",
+          "uk": "Перероблено багато областей, додано налаштування ролей і підрозділів для значень",
+          "zh-cn": "在很多领域进行了返工，添加了角色和单位的值设置"
+        },
+        "0.0.1": {
+          "en": "initial adapter",
+          "de": "Initiale Version",
+          "ru": "первоначальный адаптер",
+          "pt": "adaptador inicial",
+          "nl": "initiële adapter",
+          "fr": "adaptateur initial",
+          "it": "adattatore iniziale",
+          "es": "adaptador inicial",
+          "pl": "adapter początkowy",
+          "uk": "початковий адаптер",
+          "zh-cn": "初始适配器"
+        }
+      },
         "titleLang": {
             "en": "sma-speedwire",
             "de": "sma-speedwire",
