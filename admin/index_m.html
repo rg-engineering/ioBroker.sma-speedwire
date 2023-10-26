@@ -59,8 +59,6 @@
             settings.devices = [];
             settings.devices.push(device);
         }
-
-
         values2table('Devices', settings.devices, onChange, tableDevicesOnReady);
 
     }
@@ -133,6 +131,13 @@
         </div>
     </div>
     -->
+            <div class=row>
+                <div class="input-field col s12 m6 l4">
+                    <input type="number" class="value" id="IntervallTimer" min="10" />
+                    <label for="IntervallTimer" class="translate">IntervallTimer[sec]</label>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col s12" id="Devices">
                     <a id="addNewDevice" class="btn-floating waves-effect waves-light blue table-button-add" title="add device"><i class="material-icons">add</i></a>
@@ -143,10 +148,11 @@
                                 <tr>
 
                                     <th id="tableDevices_col0" data-name="Active" data-type="checkbox" style="background: #64b5f6 " class="header translate">Active</th>
-                                    <th id="tableDevices_col1" data-name="IP" data-type="text" style="background: #64b5f6 " class="header translate">ip address of sma device</th>
-                                    <th id="tableDevices_col2" data-name="Port" data-type="number" style="background: #64b5f6 " class="header translate">Port</th>
-                                    <th id="tableDevices_col3" data-name="User" data-type="text" style="background: #64b5f6 " class="header translate">User</th>
-                                    <th id="tableDevices_col4" data-name="Password" data-type="text" style="background: #64b5f6 " class="header translate">Password</th>
+                                    <th id="tableDevices_col1" data-name="Name" data-type="text" style="background: #64b5f6 " class="header translate">Name</th>
+                                    <th id="tableDevices_col2" data-name="IP" data-type="text" style="background: #64b5f6 " class="header translate">ip address of sma device</th>
+                                    <th id="tableDevices_col3" data-name="Port" data-type="number" style="background: #64b5f6 " class="header translate">Port</th>
+                                    <th id="tableDevices_col4" data-name="User" data-type="text" style="background: #64b5f6 " class="header translate">User</th>
+                                    <th id="tableDevices_col5" data-name="Password" data-type="text" style="background: #64b5f6 " class="header translate">Password</th>
 
                                     <th data-buttons="up down delete" style="width: 100px; background: #64b5f6"></th>
                                 </tr>

@@ -32,7 +32,7 @@
 "use strict";
 
 const utils = require("@iobroker/adapter-core");
-const Device = require("./lib/speedwire/Device").Device;
+const Device = require("./lib/speedwire/device").Device;
 
 class sma_speedwire extends utils.Adapter {
 
@@ -50,10 +50,6 @@ class sma_speedwire extends utils.Adapter {
 
 		this.Devices = [];
 
-		for (let i = 0; i < this.devices.length; i++) {
-			const d = new Device(this.devices[i], this);
-			this.Devices.push(d);
-		}
 
 	}
 
@@ -110,20 +106,52 @@ class sma_speedwire extends utils.Adapter {
 	// is called when databases are connected and adapter received configuration.
 	// start here!
 	async onReady() {
-		await this.prepare();
-		await this.main();
-		this.readTimerId=setInterval(this.main.bind(this), 5 * 60 * 1000);
+
+		if (this.config.devices != null) {
+			for (let i = 0; i < this.config.devices.length; i++) {
+
+				this.log.debug("creating device " + JSON.stringify(this.config.devices[i]));
+
+				if (this.config.devices[i].Active) {
+					const d = new Device(this.config.devices[i], this);
+					this.Devices.push(d);
+				}
+			}
+
+			this.log.debug("devices created " + this.Devices.length);
+
+			await this.prepare();
+			this.log.debug("devices prepared ");
+			await this.main();
+
+			let IntervallTimer = this.config.IntervallTimer;
+			if (IntervallTimer == null || IntervallTimer < 10) {
+				this.log.warn("setting intervall timer to 10 sec");
+				IntervallTimer = 10;
+			}
+
+			this.log.debug("start intervall timer " + IntervallTimer + " sec");
+
+			this.readTimerId = setInterval(this.main.bind(this), IntervallTimer * 1000);
+		}
+		else {
+			this.log.error("no device configured, please check settings " + JSON.stringify(this.config));
+		}
 	}
 
 	async prepare() {
-		for (let i = 0; i < this.Devices.length; i++) {
-			await this.devices[i].prepare();
+		if (this.Devices != null) {
+			for (let i = 0; i < this.Devices.length; i++) {
+				await this.Devices[i].prepare();
+			}
 		}
 	}
 
 	async main() {
-		for (let i = 0; i < this.Devices.length; i++) {
-			await this.devices[i].getData();
+		if (this.Devices != null) {
+			for (let i = 0; i < this.Devices.length; i++) {
+				await this.Devices[i].getData();
+			}
 		}
 	}
 }
